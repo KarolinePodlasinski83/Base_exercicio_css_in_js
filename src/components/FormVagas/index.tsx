@@ -1,5 +1,4 @@
 import { FormEvent, useState } from 'react'
-
 import { Form, Campo, BotaoPesquisar } from './styles'
 
 type Props = {
@@ -17,9 +16,9 @@ const FormVagas = ({ aoPesquisar }: Props) => {
   return (
     <Form onSubmit={aoEnviarForm}>
       <Campo
+        type="search"
         placeholder="Front-end, fullstack, node, design"
         onChange={(e) => setTermo(e.target.value)}
-        type="search"
       />
       <BotaoPesquisar type="submit">Pesquisar</BotaoPesquisar>
     </Form>
